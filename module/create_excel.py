@@ -22,6 +22,7 @@ def create_excel(wb, excel_list, excel_path):
         ws.cell(row=last_row, column=8, value=item['question'])
         ws.cell(row=last_row, column=9, value=item['realfile_name'])
         ws.cell(row=last_row, column=10, value=item['real_path'])
+        ws.cell(row=last_row, column=11, value=item['realfile_name'])
 
     wb.save(excel_path)
 
@@ -34,7 +35,7 @@ def _has_header(wb, path):
 
     if not header_exists:
         headers = ['위원회', '피감기관', 'BOOK_ID', 'SEQNO', 'FILE_NAME',
-                   '국정감사 파일명', '위원', '질의', 'REALFILE_NAME', '실제 경로']
+                   '국정감사 파일명', '위원', '질의', 'REALFILE_NAME', '실제 경로', '파일명']
 
         for col_idx, header in enumerate(headers, start=1):
             ws.cell(row=1, column=col_idx, value=header)

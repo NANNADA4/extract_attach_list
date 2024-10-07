@@ -10,6 +10,7 @@ from module.process_folder import process_folder
 
 def main():
     """main 함수. PDF의 4단계에서 별도제출자료 리스트를 추출합니다"""
+    print("-"*24)
     print("\n>>>>>>별도제출자료 리스트 추출 (구축세부내역)<<<<<<\n")
     print("-"*24)
     input_path = input("폴더 경로를 입력하세요 (종료는 0을 입력) : ")

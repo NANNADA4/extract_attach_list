@@ -22,7 +22,7 @@ def create_excel(wb, excel_list, excel_path):
         ws.cell(row=last_row, column=8, value=item['question'])
         ws.cell(row=last_row, column=9, value=item['realfile_name'])
         ws.cell(row=last_row, column=10, value=item['real_path'])
-        ws.cell(row=last_row, column=11, value=item['realfile_name'])
+        ws.cell(row=last_row, column=11, value=item['file_name'])
 
     wb.save(excel_path)
 

@@ -53,7 +53,8 @@ def process_folder(input_path):
                         "question": item['parent']['title'],
                         "realfile_name": item['title'],
                         "real_path": os.path.join(cmt, org, item['parent']['parent']['title'],
-                                                  item['title'])
+                                                  item['title']),
+                        "file_name": file
                     })
                 except Exception as e:  # pylint: disable=W0703
                     e = "PDF 북마크 추출 오류"
